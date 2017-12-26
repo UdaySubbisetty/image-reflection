@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp3-yf-wWx" customClass="ReflectionView">
+                                <rect key="frame" x="41" y="27" width="292" height="246"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMAGE.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Q1T-6I-WiQ">
+                                        <rect key="frame" x="-9" y="-7" width="311" height="264"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="DdR-KK-XsI"/>
+                                    <constraint firstAttribute="height" constant="246" id="KsZ-li-Mg8"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gv8-ma-jPp">
+                                <rect key="frame" x="54" y="459" width="270" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="K3V-VY-hsv"/>
+                                    <constraint firstAttribute="height" constant="29" id="Kpf-QW-G5n"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateGap:" destination="BYZ-38-t0r" eventType="valueChanged" id="7V2-e2-Wmf"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Plk-Qv-lhM">
+                                <rect key="frame" x="54" y="564" width="270" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="4jU-qz-yYH"/>
+                                    <constraint firstAttribute="height" constant="29" id="9Ax-UH-1RU"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateScale:" destination="BYZ-38-t0r" eventType="valueChanged" id="moS-Uw-klj"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jiK-TY-nFG">
+                                <rect key="frame" x="52" y="367" width="270" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="ZUd-vE-1o9"/>
+                                    <constraint firstAttribute="width" constant="266" id="sSW-6v-OGy"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateAlpha:" destination="BYZ-38-t0r" eventType="valueChanged" id="EtJ-2E-Jhm"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zp3-yf-wWx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="2eB-NV-awA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Plk-Qv-lhM" secondAttribute="trailing" constant="53" id="37V-UM-357"/>
+                            <constraint firstItem="jiK-TY-nFG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="6Tv-Kv-mpF"/>
+                            <constraint firstItem="Gv8-ma-jPp" firstAttribute="top" secondItem="jiK-TY-nFG" secondAttribute="bottom" constant="63" id="DWd-AX-bwx"/>
+                            <constraint firstItem="Zp3-yf-wWx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="KLU-1p-6vM"/>
+                            <constraint firstItem="Plk-Qv-lhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="aTm-cy-yim"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gv8-ma-jPp" secondAttribute="trailing" constant="53" id="cOn-Ie-ggn"/>
+                            <constraint firstItem="Plk-Qv-lhM" firstAttribute="top" secondItem="Gv8-ma-jPp" secondAttribute="bottom" constant="76" id="hTk-p8-3iJ"/>
+                            <constraint firstItem="Gv8-ma-jPp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="oZw-CB-xBY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zp3-yf-wWx" secondAttribute="trailing" constant="42" id="umz-b7-Rrz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Plk-Qv-lhM" secondAttribute="bottom" constant="74" id="w3g-Qy-7SH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jiK-TY-nFG" secondAttribute="trailing" constant="55" id="xiS-XM-vkY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="refelctionView" destination="Zp3-yf-wWx" id="VDV-sd-Dv2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMAGE.jpeg" width="265" height="190"/>
+    </resources>
+</document>
